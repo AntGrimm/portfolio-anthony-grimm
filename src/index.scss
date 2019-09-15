@@ -1,0 +1,82 @@
+$primary-color: #2d2e2a;
+$secondary-color: #e7e4d3;
+$background-color: #66948a;
+$border-color: #58504b;
+$nav-bar-color: #1b1a53;
+$body-color: #d3692b;
+
+@mixin rounded-border($radius) {
+  border-radius: $radius;
+  box-shadow: 0px 2px 8px;
+}
+
+:root {
+  font: 16px / 1 sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: $body-color;
+}
+
+main {
+  background-color: $background-color;
+}
+
+.profile-image {
+  @include rounded-border(0.5rem);
+  height: 18rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $secondary-color;
+  background-color: $nav-bar-color;
+  box-shadow: 0px 2px 8px;
+}
+
+.nav-name {
+  margin-left: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu > p {
+  padding: 1rem;
+  margin-right: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: slategrey;
+  box-shadow: 0px 2px 8px;
+}
+
+.name-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 28rem;
+}
+
+.name-title > div > a {
+  padding: 1rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
