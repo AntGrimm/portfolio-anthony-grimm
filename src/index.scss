@@ -1,13 +1,13 @@
-$primary-color: #2d2e2a;
-$secondary-color: #e7e4d3;
+$primary-color: #ffe4c4;
+$secondary-color: #438da3;
 $background-color: #66948a;
 $border-color: #58504b;
-$nav-bar-color: #1b1a53;
-$body-color: #d3692b;
+$nav-bar-color: #4f677e;
+$body-color: #1b1a53;
 
 @mixin rounded-border($radius) {
   border-radius: $radius;
-  box-shadow: 0px 2px 8px;
+  box-shadow: 0px 2px 8px $body-color;
 }
 
 :root {
@@ -22,10 +22,11 @@ body {
   margin: 0;
   min-height: 100%;
   background-color: $body-color;
+  color: $primary-color;
 }
 
 main {
-  background-color: $background-color;
+  background-color: $nav-bar-color;
 }
 
 .profile-image {
@@ -59,9 +60,10 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
-  background-color: slategrey;
-  box-shadow: 0px 2px 8px;
+  padding: 3rem;
+  box-shadow: 0px 2px 8px $body-color;
+  background-image: url('./images/background-mountains.jpg');
+  background-repeat: round;
 }
 
 .name-title {
@@ -71,8 +73,44 @@ main {
   max-width: 28rem;
 }
 
+.name-title > h1 {
+  margin: 2rem;
+}
+
+.name-title > h3 {
+  margin-top: 2rem;
+}
+
 .name-title > div > a {
   padding: 1rem;
+  color: $secondary-color;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.contact-me > a {
+  margin: 1rem;
+  color: $secondary-color;
+}
+
+.contact-me > a:hover {
+  color: #775757;
+}
+
+.name-title > div > a:hover {
+  color: #775757;
 }
 
 .projects {

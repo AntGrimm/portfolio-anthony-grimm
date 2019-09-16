@@ -1,5 +1,7 @@
 import React from 'react'
+import newProfileImage from '../images/090419_Tony-3.jpg'
 import profileImage from '../images/cocktail-panda.jpg'
+import QuotesArray from '../components/QuotesArray'
 
 const HomePage = () => {
   return (
@@ -18,20 +20,19 @@ const HomePage = () => {
           <section className="img-quote-area">
             <img
               className="profile-image"
-              src={profileImage}
+              src={newProfileImage}
               alt="Anthony Grimm"
             />
           </section>
           <section className="name-title">
             <h1>Anthony Grimm</h1>
             <div className="header-contact-info">
-              <a href="https://www.linkedin.com/in/anthony-grimm/">LinkedIn</a>
-              <a href="https://github.com/AntGrimm">GitHub</a>
+              <a href="https://www.linkedin.com/in/anthony-grimm/">LinkedIn</a>-
+              <a href="https://github.com/AntGrimm">GitHub</a>-
               <a href="mailto:anthony.l.grimm@gmail.com">E-mail</a>
             </div>
             <h3>
-              "Software undergoes beta testing shortly before it’s released.
-              Beta is Latin for 'still doesn’t work.'" -Anonymous
+              <QuotesArray />
             </h3>
           </section>
         </header>
@@ -43,17 +44,28 @@ const HomePage = () => {
           <div>Project 3</div>
           <div>Project 4</div>
         </section>
-        <section>
+        <section className="skills-section">
           <h2>Skills</h2>
-          <div>Skill</div>
-          <div>Skill</div>
-          <div>Skill</div>
-          <div>Skill</div>
+          <div>
+            <div>Skill</div>
+            <div>Skill</div>
+            <div>Skill</div>
+            <div>Skill</div>
+          </div>
         </section>
-        <section>
+        <section className="contact-section">
           <h2>Contact</h2>
-          <div>LinkedIn</div>
-          <div>GitHub</div>
+          <div className="contact-me">
+            <a href="https://www.linkedin.com/in/anthony-grimm/">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/AntGrimm">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="mailto:anthony.l.grimm@gmail.com">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+          </div>
         </section>
       </main>
     </>

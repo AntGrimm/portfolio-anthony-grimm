@@ -1,125 +1,60 @@
 import React from 'react'
 
-const softwareQuotes = [
-  {
-    number: '1',
-    quote:
-      '"The best thing about a boolean is even if you are wrong, you are only off by a bit." -Anonymous'
-  },
-  {
-    number: '2',
-    quote:
-      '"Without requirements or design, programming is the art of adding bugs to an empty text file." -Louis Srygley'
-  },
-  {
-    number: '3',
-    quote:
-      '"Before software can be reusable it first has to be usable." -Ralph Johnson'
-  },
-  {
-    number: '4',
-    quote:
-      '"I think Microsoft named .Net so it wouldn’t show up in a Unix directory listing." -Oktal'
-  },
-  {
-    number: '5',
-    quote:
-      '"There are two ways to write error-free programs; only the third one works." -Alan J. Perlis'
-  },
-  {
-    number: '6',
-    quote:
-      '"Ready, fire, aim: the fast approach to software development. Ready, aim, aim, aim, aim: the slow approach to software development." -Anonymous'
-  },
-  {
-    number: '7',
-    quote: '"It’s not a bug – it’s an undocumented feature." -Anonymous'
-  },
-  {
-    number: '8',
-    quote:
-      '"One man’s crappy software is another man’s full-time job." -Jessica Gaston'
-  },
-  {
-    number: '9',
-    quote:
-      '"A good programmer is someone who always looks both ways before crossing a one-way street." -Doug Linder'
-  },
-  {
-    number: '10',
-    quote: '"Deleted code is debugged code." -Jeff Sickel'
-  },
-  {
-    number: '11',
-    quote:
-      '"Walking on water and developing software from a specification are easy if both are frozen." -Edward V Berard'
-  },
-  {
-    number: '12',
-    quote:
-      '"If debugging is the process of removing software bugs, then programming must be the process of putting them in." -Edsger Dijkstra'
-  },
-  {
-    number: '13',
-    quote: '"T, you are only off by a bit." -Anonymous'
-  },
-  {
-    number: '14',
-    quote:
-      '"Without requirements or design, programming is the art of adding bugs to an empty text file. -Louis Srygley"'
-  },
-  {
-    number: '15',
-    quote: '"T, you are only off by a bit." -Anonymous'
-  },
-  {
-    number: '16',
-    quote:
-      '"Software undergoes beta testing shortly before it’s released. Beta is Latin for still doesn’t work." -Anonymous'
-  },
-  {
-    number: '17',
-    quote:
-      '"It’s a curious thing about our industry: not only do we not learn from our mistakes, but we also don’t learn from our successes." -Keith Braithwaite'
-  },
-  {
-    number: '18',
-    quote:
-      '"In order to understand recursion, one must first understand recursion." -Anonymous'
-  },
-  {
-    number: '19',
-    quote:
-      '"The cheapest, fastest, and most reliable components are those that aren’t there." -Gordon Bell'
-  },
-  {
-    number: '20',
-    quote:
-      '"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off." ―Bjarne Stroustrup'
-  },
-  {
-    number: '21',
-    quote:
-      '"In the one and only true way. The object-oriented version of Spaghetti code is, of course, Lasagna code. (Too many layers)." -Roberto Waltman.'
-  },
-  {
-    number: '22',
-    quote:
-      '"For a long time it puzzled me how something so expensive, so leading edge, could be so useless. And then it occurred to me that a computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.” -Bill Bryson'
-  },
-  {
-    number: '23',
-    quote:
-      '"I dont care if it works on your machine! We are not shipping your machine!" -Vidiu Platon.'
+export default function Quotes() {
+  const getRandomSoftwareQuote = () => {
+    const number = Math.floor(Math.random() * 17) // number between 0-17
+    switch (number) {
+      case 1:
+        return '"The best thing about a boolean is even if you are wrong, you are only off by a bit." ―Anonymous'
+
+      case 2:
+        return '"Without requirements or design, programming is the art of adding bugs to an empty text file." ―Louis Srygley'
+
+      case 3:
+        return '"Before software can be reusable it first has to be usable." ―Ralph Johnson'
+
+      case 4:
+        return '"I think Microsoft named .Net so it wouldn’t show up in a Unix directory listing." ―Oktal'
+
+      case 5:
+        return '"There are two ways to write error-free programs; only the third one works." ―Alan J. Perlis'
+
+      case 6:
+        return '"The first step of any project is to grossly underestimate its complexity and difficulty." ―Nicoll Hunt'
+
+      case 7:
+        return '"Its not a bug – it’s an undocumented feature." ―Anonymous'
+
+      case 8:
+        return '"One man’s crappy software is another man’s full-time job." ―Jessica Gaston'
+
+      case 9:
+        return '"A good programmer is someone who always looks both ways before crossing a one-way street." ―Doug Linder'
+
+      case 10:
+        return '"Walking on water and developing software from a specification are easy if both are frozen." ―Edward V Berard'
+
+      case 11:
+        return '"If debugging is the process of removing software bugs, then programming must be the process of putting them in." ―Edsger Dijkstra'
+
+      case 12:
+        return '"To iterate is human, to recurse divine." ―L. Peter Deutsch'
+
+      case 13:
+        return '"Software undergoes beta testing shortly before it’s released. Beta is Latin for still doesn’t work." ―Anonymous'
+
+      case 14:
+        return '“Your code doesn’t work!” “It works on *my* machine.” “Fine, we’ll ship your machine!” ― And that’s how Docker started 🙂 ―Marabou'
+
+      case 15:
+        return '"In order to understand recursion, one must first understand recursion." ―Anonymous'
+
+      case 16:
+        return '"C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off." ―Bjarne Stroustrup'
+
+      default:
+        return '"In the one and only true way. The object-oriented version of Spaghetti code is, of course, Lasagna code." ―Roberto Waltman.'
+    }
   }
-]
-
-const QuotesArray = () => {
-  return (
-    <>
-      <section></section>
-    </>
-  )
+  return <div>{getRandomSoftwareQuote()}</div>
 }
-
-export default QuotesArray
